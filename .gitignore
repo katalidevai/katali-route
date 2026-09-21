@@ -9,3 +9,4 @@ outputs/
 *.a
 *.jsonl
 config/route.conf
+__pycache__/
