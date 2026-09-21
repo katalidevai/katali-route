@@ -1,0 +1,11 @@
+build/
+work/
+outputs/
+.tmp/
+*.exe
+*.dll
+*.lib
+*.o
+*.a
+*.jsonl
+config/route.conf

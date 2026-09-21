@@ -1,0 +1,39 @@
+# Katali-Route policy defaults
+# Values map to KataliRoutePolicy.
+minimum_confidence=0.80
+max_retries=1
+validate_structured_output=1
+routing_enabled=1
+threads=0
+pool_load_mode=eager
+
+# Optional native Laya provider paths. Leave empty for the dependency-free core.
+laya_onnx_path=C:\\Users\\joanr\\Documents\\Codex\\2026-09-21\\katali-route\\work\\laya-onnx\\laya.onnx
+laya_tokenizer_json_path=C:\\Users\\joanr\\Documents\\Codex\\2026-09-21\\katali-route\\work\\laya-onnx\\tokenizer\\tokenizer.json
+onnxruntime_dll_path=C:\\Users\\joanr\\Documents\\Codex\\2026-09-21\\katali-route\\work\\ort-package\\runtimes\\win-x64\\native\\onnxruntime.dll
+tokenizers_c_library_path=C:\\Users\\joanr\\Documents\\Codex\\2026-09-21\\katali-route\\work\\tokenizers-cpp\\rust\\target\\x86_64-pc-windows-gnu\\release\\libtokenizers_c.a
+
+# GGUF model pool paths
+gguf_qwen3_0_6b_id=qwen3-0.6b
+gguf_qwen3_0_6b_context_length=2048
+gguf_qwen3_0_6b_max_output_tokens=32
+gguf_qwen3_0_6b_available=1
+gguf_qwen3_0_6b_path=C:\\models\\qwen3-0.6b-gguf\\Qwen3-0.6B-Q4_K_M.gguf
+gguf_qwen3_1_7b_id=qwen3-1.7b
+gguf_qwen3_1_7b_context_length=2048
+gguf_qwen3_1_7b_max_output_tokens=32
+gguf_qwen3_1_7b_available=1
+gguf_qwen3_1_7b_path=C:\\models\\qwen3-1.7b-gguf\\Qwen3-1.7B.Q4_K_M.gguf
+gguf_qwen3_4b_id=qwen3-4b
+gguf_qwen3_4b_context_length=2048
+gguf_qwen3_4b_max_output_tokens=32
+gguf_qwen3_4b_available=1
+gguf_qwen3_4b_path=C:\\models\\qwen3-4b-gguf\\Qwen3-4B-Q4_K_M.gguf
+gguf_qwen3_8b_id=qwen3-8b
+gguf_qwen3_8b_context_length=2048
+gguf_qwen3_8b_max_output_tokens=32
+gguf_qwen3_8b_available=1
+gguf_qwen3_8b_path=C:\\models\\qwen3-8b-gguf\\Qwen3-8B-Q4_K_M.gguf
+
+# The Route core does not load GGUF/Laya weights. Model metadata and execution
+# callbacks are supplied by the host process.
