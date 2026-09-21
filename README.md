@@ -18,7 +18,8 @@ Download instructions and the required `C:\models` folder layout are in
 
 Download the ready-to-run Windows package from the [Katali Route v0.1.0
 Release](https://github.com/katalidevai/katali-route/releases/tag/v0.1.0).
-The ZIP contains `katali-route.exe`, Laya ONNX, ONNX Runtime, the
+The ZIP contains `katali-route-gui.exe` for the basic native chat window,
+`katali-route.exe` for the command-line demo, Laya ONNX, ONNX Runtime, the
 Katali-GGUF runtime, configuration files, icons, and third-party notices.
 
 The repository intentionally does not contain C source or binary files. The
