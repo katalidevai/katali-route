@@ -14,10 +14,12 @@ executable is distributed as a Release asset.
 
 ## Model description
 
-Katali Route is a local model-routing sidecar. Laya runs first as a compact
-decision model and selects the most appropriate Qwen3 GGUF model from the
-configured pool. Katali-GGUF then loads that selected model and performs the
-text generation locally.
+Katali Route uses [Laya](https://github.com/receptron/laya), a compact typed
+decision model, as its routing layer. The Windows package includes the
+[Laya ONNX model](https://huggingface.co/receptron/laya-onnx) and runs it
+locally through ONNX Runtime before generation begins. Laya selects the most
+appropriate Qwen3 GGUF model from the configured pool. Katali-GGUF then loads
+that selected model and performs the final text generation locally.
 
 The included Laya ONNX assets are used for routing decisions; Laya does not
 generate the final chat response. The four Qwen3 generation models are kept
@@ -25,6 +27,11 @@ outside the package because of their size. Download instructions and official
 model links are in [docs/models.md](docs/models.md).
 
 The current pool supports Qwen3 0.6B, 1.7B, 4B, and 8B Q4_K_M GGUF models.
+
+Laya is used for decisions and model selection; it is not the final text
+generator. Laya model weights are published by Convai Innovations under Apache
+2.0, and the Laya ONNX/export project is MIT-licensed. See
+[third-party notices](docs/third-party-notices.md).
 
 Katali-Route is a local decision and routing sidecar for Katali-GGUF. It chooses
 an execution path; Katali-GGUF remains responsible for model loading and text
