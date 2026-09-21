@@ -2,6 +2,18 @@
 
 **Developed By : Joan Apita**
 
+## Required Qwen3 models
+
+The package expects these four Qwen3 GGUF models:
+
+1. [Qwen3-0.6B-Q4_K_M.gguf](https://huggingface.co/Qwen/Qwen3-0.6B-GGUF)
+2. [Qwen3-1.7B-Q4_K_M.gguf](https://huggingface.co/Qwen/Qwen3-1.7B-GGUF)
+3. [Qwen3-4B-Q4_K_M.gguf](https://huggingface.co/Qwen/Qwen3-4B-GGUF)
+4. [Qwen3-8B-Q4_K_M.gguf](https://huggingface.co/Qwen/Qwen3-8B-GGUF)
+
+Download instructions and the required `C:\models` folder layout are in
+[docs/models.md](docs/models.md).
+
 ## Download the Windows executable
 
 Download the ready-to-run Windows package from the [Katali Route v0.1.0
