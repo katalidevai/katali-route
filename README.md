@@ -1,5 +1,7 @@
 # Katali-Route
 
+**Developed By : Joan Apita**
+
 Katali-Route is a local decision and routing sidecar for Katali-GGUF. It chooses
 an execution path; Katali-GGUF remains responsible for model loading and text
 generation.
