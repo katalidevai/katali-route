@@ -2,6 +2,30 @@
 
 **Developed By : Joan Apita**
 
+## Download the Windows executable
+
+Download the ready-to-run Windows package from the [Katali Route v0.1.0
+Release](https://github.com/katalidevai/katali-route/releases/tag/v0.1.0).
+The ZIP contains `katali-route.exe`, Laya ONNX, ONNX Runtime, the
+Katali-GGUF runtime, configuration files, icons, and third-party notices.
+
+The repository intentionally does not contain C source or binary files. The
+executable is distributed as a Release asset.
+
+## Model description
+
+Katali Route is a local model-routing sidecar. Laya runs first as a compact
+decision model and selects the most appropriate Qwen3 GGUF model from the
+configured pool. Katali-GGUF then loads that selected model and performs the
+text generation locally.
+
+The included Laya ONNX assets are used for routing decisions; Laya does not
+generate the final chat response. The four Qwen3 generation models are kept
+outside the package because of their size. Download instructions and official
+model links are in [docs/models.md](docs/models.md).
+
+The current pool supports Qwen3 0.6B, 1.7B, 4B, and 8B Q4_K_M GGUF models.
+
 Katali-Route is a local decision and routing sidecar for Katali-GGUF. It chooses
 an execution path; Katali-GGUF remains responsible for model loading and text
 generation.
